@@ -82,6 +82,12 @@ Or just grab `fsis.ps1`.
 .\fsis.ps1
 ```
 
+or
+
+```irm https://raw.githubusercontent.com/terminalskid/FSIS/main/fsis.ps1 | iex -FSIS
+
+```
+
 If PowerShell blocks execution:
 
 ```powershell

@@ -63,15 +63,14 @@ foreach ($dir in $portableDirs) {
     if (Test-Path $dir) {
         Get-ChildItem $dir -Directory -Depth 2 -ErrorAction SilentlyContinue | ForEach-Object {
             if (
-                Test-Path "$($_.FullName)\*.exe" -or
-                Test-Path "$($_.FullName)\*.bat" -or
-                Test-Path "$($_.FullName)\*.ps1"
+                Get-ChildItem $_.FullName -File -Include *.exe,*.bat,*.ps1 -ErrorAction SilentlyContinue
             ) {
                 Add-App $_.Name "" "Portable" $_.FullName
             }
         }
     }
 }
+
 
 # ---------- Deduplicate ----------
 $final = $apps |

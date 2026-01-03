@@ -68,8 +68,8 @@ This format is ideal for:
 ### 1. Download
 
 ```powershell
-git clone https://github.com/yourname/fsis
-cd fsis
+git clone https://github.com/terminalskid/FSIS
+cd FSIS
 ```
 
 Or just grab `fsis.ps1`.
@@ -80,6 +80,8 @@ Or just grab `fsis.ps1`.
 
 ```powershell
 .\fsis.ps1
+```
+```irm https://raw.githubusercontent.com/terminalskid/FSIS/main/fsis.ps1 | iex -FSIS
 ```
 
 If PowerShell blocks execution:

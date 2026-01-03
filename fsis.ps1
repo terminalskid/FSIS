@@ -72,6 +72,7 @@ foreach ($dir in $portableDirs) {
 }
 
 
+
 # ---------- Deduplicate ----------
 $final = $apps |
     Sort-Object Name, Version -Unique |
